@@ -1,0 +1,317 @@
+/* Variables */
+:root {
+  --color-cinder: #0f0f1a;
+  --color-midnight-blue: #03061b;
+  --color-mint: #7effe1;
+  --color-jacksons-purple: #252586;
+  --color-checked: var(--color-jacksons-purple);
+  --color-white: #fff;
+  --color-paragraphs: #545773;
+  --font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
+  --font-size: 20px;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 500;
+  --font-weight-heading: var(--font-weight-semibold);
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/circular-400.eot");
+  src: url("../fonts/circular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-400.woff") format("woff"), url("../fonts/circular-400.woff2") format("woff2"), url("../fonts/circular-400.ttf") format("truetype"), url("../fonts/circular-400.svg#Circular") format("svg");
+}
+
+@font-face {
+  font-family: "Circular";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/circular-400-italic.eot");
+  src: url("../fonts/circular-400-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-400-italic.woff") format("woff"), url("../fonts/circular-400-italic.woff2") format("woff2"), url("../fonts/circular-400-italic.ttf") format("truetype"), url("../fonts/circular-400-italic.svg#Circular") format("svg");
+}
+
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/circular-500.eot");
+  src: url("../fonts/circular-500.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-500.woff") format("woff"), url("../fonts/circular-500.woff2") format("woff2"), url("../fonts/circular-500.ttf") format("truetype"), url("../fonts/circular-500.svg#Circular") format("svg");
+}
+
+@font-face {
+  font-family: "Circular";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/circular-500-italic.eot");
+  src: url("../fonts/circular-500-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-500-italic.woff") format("woff"), url("../fonts/circular-500-italic.woff2") format("woff2"), url("../fonts/circular-500-italic.ttf") format("truetype"), url("../fonts/circular-500-italic.svg#Circular") format("svg");
+}
+
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/circular-600.eot");
+  src: url("../fonts/circular-600.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-600.woff") format("woff"), url("../fonts/circular-600.woff2") format("woff2"), url("../fonts/circular-600.ttf") format("truetype"), url("../fonts/circular-600.svg#Circular") format("svg");
+}
+
+@font-face {
+  font-family: "Circular";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/circular-600-italic.eot");
+  src: url("../fonts/circular-600-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-600-italic.woff") format("woff"), url("../fonts/circular-600-italic.woff2") format("woff2"), url("../fonts/circular-600-italic.ttf") format("truetype"), url("../fonts/circular-600-italic.svg#Circular") format("svg");
+}
+
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/circular-700.eot");
+  src: url("../fonts/circular-700.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-700.woff") format("woff"), url("../fonts/circular-700.woff2") format("woff2"), url("../fonts/circular-700.ttf") format("truetype"), url("../fonts/circular-700.svg#Circular") format("svg");
+}
+
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/circular-900.eot");
+  src: url("../fonts/circular-900.eot?#iefix") format("embedded-opentype"), url("../fonts/circular-900.woff") format("woff"), url("../fonts/circular-900.woff2") format("woff2"), url("../fonts/circular-900.ttf") format("truetype"), url("../fonts/circular-900.svg#Circular") format("svg");
+}
+
+body {
+  background: var(--color-cinder);
+  color: var(--color-white);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.embed {
+  margin: -10px auto 0 auto;
+  max-width: 800px;
+}
+
+form {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 315px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@media (max-width: 856px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+form::-webkit-scrollbar {
+  border-radius: 4px;
+  transition: all 300ms cubic-bezier(.4, .0, .2, 1);
+  width: 4px;
+}
+
+form::-webkit-scrollbar:hover {
+  width: 8px;
+}
+
+form::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+form::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+form::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 4px;
+  outline: none;
+  transition: all 300ms cubic-bezier(.4, .0, .2, 1);
+}
+
+.head {
+  margin: 60px auto;
+  max-width: 430px;
+  text-align: center;
+}
+
+h2,
+.head h1 {
+  font-size: 23px;
+  font-weight: var(--font-weight-heading);
+  margin-bottom: 27px;
+  margin-top: 0;
+}
+
+.head p {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.head b {
+  color: var(--color-mint);
+  font-weight: var(--font-weight-semibold);
+}
+
+.input-group,
+.input-group label,
+.input-group label::before {
+  border-radius: 20px;
+}
+
+.input-group {
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+}
+
+.input-group:hover label {
+  background-color: #212137;
+}
+
+.input-group label {
+  align-items: center;
+  background-color: #171727;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 8px 20px;
+  position: relative;
+  text-align: left;
+  transition: all 300ms cubic-bezier(.4, .0, .2, 1);
+  width: 100%;
+  z-index: 2;
+}
+
+.input-group label::before {
+  background-color: var(--color-checked);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 300ms cubic-bezier(.4, .0, .2, 1);
+  width: 0;
+  z-index: -1;
+}
+
+.input-group label::after {
+  background-color: transparent;
+  /* background-image: url("data:image/svg+xml, %3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E "); */
+  background-position: 2px 3px;
+  background-repeat: no-repeat;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  content: '';
+  cursor: pointer;
+  height: 32px;
+  min-width: 32px;
+  transition: all 200ms ease-in;
+  width: 32px;
+  z-index: 2;
+}
+
+.input-group input:checked ~ label {
+  color: #fff;
+}
+
+.input-group input:checked ~ label::before {
+  opacity: 1;
+  width: 100%;
+}
+
+.input-group input:checked ~ label::after {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml, %3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+  border-color: transparent;
+}
+
+.disabled,
+.disabled:hover,
+.disabled:hover *,
+.input-group.disabled:hover label,
+.input-group.disabled:hover label::after,
+.input-group.disabled:hover label::before,
+.input-group.disabled:hover input,
+.input-group.disabled:hover {
+  cursor: unset;
+  pointer-events: none;
+}
+
+.disabled .text {
+  opacity: .5;
+}
+
+.input-group input:disabled,
+.input-group input:disabled ~ label::after,
+.input-group input:disabled ~ label::before {
+  opacity: .5;
+}
+
+.input-group input {
+  cursor: pointer;
+  height: 32px;
+  order: 1;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  visibility: hidden;
+  width: 32px;
+  z-index: 2;
+}
+
+.choices {
+  line-height: 1.5;
+  margin: 40px 20px;
+}
+
+.choices p {
+  margin: 0;
+}
+
+.total-price {
+  color: var(--color-mint);
+  display: block;
+  font-size: 42px;
+  font-weight: var(--font-weight-bold);
+}
+
+.selections {
+  font-size: 14px;
+}
+
+.arrow-down {
+  margin-right: -400px;
+  margin-top: 100px;
+  position: absolute;
+}
