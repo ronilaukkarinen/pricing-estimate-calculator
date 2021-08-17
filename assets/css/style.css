@@ -88,6 +88,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
+  overflow: hidden;
   text-rendering: optimizeLegibility;
   text-size-adjust: none;
 }
@@ -315,7 +316,7 @@ h2,
   font-weight: var(--font-weight-bold);
 }
 
-.selections {
+.specs p {
   font-size: 14px;
 }
 
@@ -323,4 +324,15 @@ h2,
   margin-right: -400px;
   margin-top: 100px;
   position: absolute;
+}
+
+.specs {
+  margin-top: 20px;
+  opacity: .8;
+}
+
+.specs h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
