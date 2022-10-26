@@ -336,3 +336,15 @@ h2,
   margin-bottom: 10px;
   margin-top: 0;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #2e2f38;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+  }
+}
