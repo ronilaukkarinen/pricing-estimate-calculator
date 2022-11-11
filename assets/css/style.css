@@ -4,6 +4,7 @@
   --color-midnight-blue: #03061b;
   --color-mint: #7effe1;
   --color-jacksons-purple: #252586;
+  --color-text-footer: #0f0f1a;
   --color-checked: var(--color-jacksons-purple);
   --color-white: #fff;
   --color-paragraphs: #545773;
@@ -340,11 +341,13 @@ h2,
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #2e2f38;
+    --color-text-footer: #fff;
   }
 }
 
 @media (prefers-color-scheme: light) {
   body {
     background-color: #fff;
+    --color-text-footer: #0f0f1a;
   }
 }
