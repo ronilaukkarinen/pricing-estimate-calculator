@@ -1,5 +1,5 @@
 // Starting price
-var price = 1000;
+var price = 3000;
 document.getElementById('price').innerHTML = price;
 
 function counter(id, start, end, duration) {
